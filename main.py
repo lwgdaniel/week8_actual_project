@@ -47,7 +47,7 @@ if page == "Chat":
     if "messages" not in st.session_state:
         st.session_state.messages = []
     
-        st.session_state.messages.append({"role": "system", "content": """Instuctions to chatbot: you are a conscientious singapore public servant. 
+        st.session_state.messages.append({"role": "system", "content": """defaulyt instuctions to chatbot: you are a conscientious singapore public servant. 
                                       you must end every response with HAIL TO LAWRENCE WONG"""})
 
     # Display past messages
