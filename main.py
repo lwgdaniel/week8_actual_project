@@ -59,7 +59,7 @@ if page == "Chat":
     # Create an input box for user 
     user_prompt = st.chat_input("Type your question here...")
     
-    #submit = st.button("Submit")
+    #not using submit button >>>        submit = st.button("Submit")
 
     if user_prompt:
         # Store user message
@@ -73,7 +73,7 @@ if page == "Chat":
 
 
         st.chat_message("assistant").write(response)
-        #st.rerun()
+        st.rerun()
 
 elif page == "Read Me":
     st.title("Read Me")
