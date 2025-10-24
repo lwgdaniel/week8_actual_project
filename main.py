@@ -31,6 +31,12 @@ if not check_password():
     st.stop()
 
 
+########## test logging
+
+import logging
+
+logging.info("test a log message")
+
 ##########      Streamlit
 
 # Streamlit App Configuration
