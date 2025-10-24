@@ -1,4 +1,6 @@
 
+print('i hope this gets logged')
+
 #########       setup LLM pipeline
 
 import streamlit as st
@@ -29,6 +31,13 @@ from utilities import check_password
 
 if not check_password():  
     st.stop()
+
+
+########## test logging
+
+import logging
+
+logging.info("test a log message")
 
 ##########      Streamlit
 
