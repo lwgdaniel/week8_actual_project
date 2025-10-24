@@ -72,7 +72,7 @@ if page == "Chat":
         st.session_state.messages.append({"role": "assistant", "content": response})
 
 
-        #st.chat_message("assistant").write(response)
+        st.chat_message("assistant").write(response)
         #st.rerun()
 
 elif page == "Read Me":
