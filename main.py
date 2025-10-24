@@ -57,11 +57,11 @@ if page == "Chat":
             st.chat_message("assistant").write(msg["content"])
 
     # Create an input box for user 
-    user_prompt = st.text_area("Type your question here...", height=100)
+    user_prompt = st.chat_input("Type your question here...")
     
-    submit = st.button("Submit")
+    #submit = st.button("Submit")
 
-    if submit or user_prompt.strip():
+    if user_prompt:
         # Store user message
         st.session_state.messages.append({"role": "user", "content": user_prompt})
 
