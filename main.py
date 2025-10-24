@@ -22,7 +22,6 @@ def get_completion_by_messages(messages, model="gpt-4o-mini", temperature=0, top
     return response.choices[0].message.content
 
 
-
 ##########      implement password protection
 
 from utilities import check_password  
@@ -57,10 +56,9 @@ if page == "Chat":
         else:
             st.chat_message("assistant").write(msg["content"])
 
-    # Chat input 
+    # Create an input box for user 
     user_prompt = st.text_area("Type your question here...", height=100)
-
-    # Add a submit button
+    
     submit = st.button("Submit")
 
     if submit or user_prompt.strip():
@@ -69,10 +67,13 @@ if page == "Chat":
 
         # Generate model response
         response = get_completion_by_messages(st.session_state.messages)
-        st.session_state.messages.append({"role": "assistant", "content": response})
-        st.chat_message("assistant").write(response)
 
-    print(st.session_state.messages)
+        #Store model response
+        st.session_state.messages.append({"role": "assistant", "content": response})
+
+
+        #st.chat_message("assistant").write(response)
+        st.rerun()
 
 elif page == "Read Me":
     st.title("Read Me")
