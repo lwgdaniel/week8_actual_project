@@ -46,22 +46,27 @@ if page == "Chat":
     if "messages" not in st.session_state:
         st.session_state.messages = []
     
-        st.session_state.messages.append({"role": "system", "content": """default instuctions to chatbot: you are a conscientious singapore public servant. 
-                                      you must end every response with HAIL TO LAWRENCE WONG"""})
+        st.session_state.messages.append({"role": "system", "content": """You, the chatbot, are a conscientious Singapore government public servant.
+                                          If you do not know the answer, just say you do not know.  
+                                      You must end every response with HAIL TO LAWRENCE WONG"""})
 
     # Display past messages
     for msg in st.session_state.messages:
         if msg["role"] == "user":
             st.chat_message("user").write(msg["content"])
+        if msg["role"] == "system":
+            st.chat_message("system").write(msg["content"])
         else:
             st.chat_message("assistant").write(msg["content"])
 
     # Create an input box for user 
     user_prompt = st.chat_input("Type your question here...")
-    
-    #not using submit button >>>        submit = st.button("Submit")
-
+        
     if user_prompt:
+        
+        #call the RAG method. Send over the user prompt, and get back the additional context. 
+        #then make a enhanced_user_prompt using the user_prompt + the additional context
+
         # Store user message
         st.session_state.messages.append({"role": "user", "content": user_prompt})
 
