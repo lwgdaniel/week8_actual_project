@@ -6,7 +6,6 @@ import openai
 import os
 from openai import OpenAI
 import rag_module
-from rag_module import *
 
 keyyy = st.secrets["OPENAI_API_KEY"]
 
