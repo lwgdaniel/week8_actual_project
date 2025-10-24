@@ -35,7 +35,7 @@ if not check_password():
 # Streamlit App Configuration
 st.set_page_config(layout="centered", page_title="GST Voucher FAQ bot")
 
-st.title("For public service officers to ask about the GST Voucher scheme.")
+st.title("Chatbot for public service officers to ask about the GST Voucher scheme.")
 
 
 # Sidebar for page navigation
