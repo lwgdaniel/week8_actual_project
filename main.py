@@ -40,7 +40,7 @@ st.title("For public service officers to ask about the GST Voucher scheme.")
 
 
 # Sidebar for page navigation
-page = st.sidebar.radio("Navigate", ["Chat", "About Us"])
+page = st.sidebar.radio("Navigate", ["Chat", "Read Me"])
 
 if page == "Chat":
 
@@ -72,13 +72,14 @@ if page == "Chat":
 
     print(st.session_state.messages)
 
-elif page == "About Us":
-    st.title("About Us")
+elif page == "Read Me":
+    st.title("Read Me")
     st.write("""
-    Welcome to **CrapGPT**, the intentionally worse version of ChatGPT.  
-
-    Our mission is to make AI conversations a bit more chaotic and humorous.  
-    This project is purely for entertainment and experimentation purposes.
+    The permanent GST Voucher scheme was introduced by the Government in Budget 2012 to 
+             help lower- and middle-income Singaporean households with their expenses, 
+             in particular what they pay in Goods and Services Tax (GST). 
+             Each of the four components provides support for various household needs – 
+             Cash for their immediate needs; MediSave for seniors to support their healthcare needs; U-Save to offset their utilities bills; and Service and Conservancy Charges (S&CC) Rebate to offset their S&CC.
     """)
 
 #Button to reset the app and clear session
