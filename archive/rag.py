@@ -1,5 +1,6 @@
 
-import pandas as pd
+########## note from Daniel: when we import this module into the main, everything runs from top to bottom
+
 from openai import OpenAI
 from dotenv import load_dotenv
 import os

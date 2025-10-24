@@ -5,6 +5,7 @@ import streamlit as st
 import openai 
 import os
 from openai import OpenAI
+from rag_module import *
 
 keyyy = st.secrets["OPENAI_API_KEY"]
 
@@ -75,7 +76,6 @@ if page == "Chat":
 
         #Store model response
         st.session_state.messages.append({"role": "assistant", "content": response})
-
 
         st.chat_message("assistant").write(response)
         st.rerun()
