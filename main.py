@@ -75,8 +75,8 @@ if page == "Chat":
 elif page == "Read Me":
     st.title("Read Me")
     st.write("""
-             This bot is for public officers to enquire about eh GST Voucher scheme. I will reply based on public FAQs
-             that have been made available to me. Please note that the FAQs are not online - they are the FAQs loaded by the admin team.
+             This bot is for public officers to enquire about the GST Voucher scheme. I will reply based on public FAQs
+             that have been made available to me. Please note that these FAQs are not online - they are loaded by the admin team.
              """)
 
     st.write("""
