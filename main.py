@@ -75,12 +75,18 @@ if page == "Chat":
 elif page == "Read Me":
     st.title("Read Me")
     st.write("""
-    The permanent GST Voucher scheme was introduced by the Government in Budget 2012 to 
+             This bot is for public officers to enquire about eh GST Voucher scheme. I will reply based on public FAQs
+             that have been made available to me. Please note that the FAQs are not online.
+             """)
+
+    st.write("""
+             
+             The permanent GST Voucher scheme was introduced by the Government in Budget 2012 to 
              help lower- and middle-income Singaporean households with their expenses, 
              in particular what they pay in Goods and Services Tax (GST). 
              Each of the four components provides support for various household needs – 
              Cash for their immediate needs; MediSave for seniors to support their healthcare needs; U-Save to offset their utilities bills; and Service and Conservancy Charges (S&CC) Rebate to offset their S&CC.
-    """)
+             """)
 
 #Button to reset the app and clear session
 
