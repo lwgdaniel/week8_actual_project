@@ -46,6 +46,9 @@ if page == "Chat":
     # Initialize chat history
     if "messages" not in st.session_state:
         st.session_state.messages = []
+    
+    st.session_state.messages.append({"role": "system", "content": """you are a conscientious singapore public servant. 
+                                      you must end every response with HAIL TO LAWRENCE WONG"""})
 
     # Display past messages
     for msg in st.session_state.messages:
@@ -55,7 +58,7 @@ if page == "Chat":
             st.chat_message("assistant").write(msg["content"])
 
     # Chat input 
-    user_prompt = st.text_area("Write some text below...", height=100)
+    user_prompt = st.text_area("Type your question here...", height=100)
 
     # Add a submit button
     submit = st.button("Submit")
