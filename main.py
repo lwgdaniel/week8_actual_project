@@ -1,16 +1,10 @@
 
-##########  setup llm pipe
+#########       setup LLM pipeline
+
 import streamlit as st
 import openai 
-import dotenv
 import os
-from dotenv import load_dotenv
 from openai import OpenAI
-
-#for local
-#
-# load_dotenv('.env')
-
 
 keyyy = st.secrets["OPENAI_API_KEY"]
 
@@ -27,17 +21,22 @@ def get_completion_by_messages(messages, model="gpt-4o-mini", temperature=0, top
     )
     return response.choices[0].message.content
 
-# Check password
+
+
+##########      implement password protection
 
 from utilities import check_password  
 
 if not check_password():  
     st.stop()
 
-# Streamlit App Configuration
-st.set_page_config(layout="centered", page_title="CrapGPT")
 
-st.title("a worse version of chatgpt version 2 for annabel")
+##########      Streamlit
+
+# Streamlit App Configuration
+st.set_page_config(layout="centered", page_title="GST Voucher FAQ bot")
+
+st.title("For public service officers to ask about the GST Voucher scheme.")
 
 
 # Sidebar for page navigation
