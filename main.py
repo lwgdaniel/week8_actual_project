@@ -30,7 +30,7 @@ from utilities import check_password
 if not check_password():  
     st.stop()
 
-##########      Streamlit
+##########      setup chatbot
 
 # Streamlit App Configuration
 st.set_page_config(layout="centered", page_title="GST Voucher FAQ bot")
@@ -47,7 +47,7 @@ if page == "Chat":
     if "messages" not in st.session_state:
         st.session_state.messages = []
     
-    st.session_state.messages.append({"role": "system", "content": """you are a conscientious singapore public servant. 
+        st.session_state.messages.append({"role": "system", "content": """you are a conscientious singapore public servant. 
                                       you must end every response with HAIL TO LAWRENCE WONG"""})
 
     # Display past messages
