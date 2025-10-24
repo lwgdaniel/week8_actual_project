@@ -1,4 +1,6 @@
 
+print('i hope this gets logged')
+
 #########       setup LLM pipeline
 
 import streamlit as st
