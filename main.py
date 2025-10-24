@@ -54,7 +54,7 @@ if page == "Chat":
     for msg in st.session_state.messages:
         if msg["role"] == "user":
             st.chat_message("user").write(msg["content"])
-        if msg["role"] == "system":
+        elif msg["role"] == "system":
             st.chat_message("system").write(msg["content"])
         else:
             st.chat_message("assistant").write(msg["content"])
